@@ -11,7 +11,7 @@ Run "source activate" or ". activate" to activate a previously installed environ
 
 ## CLI Use
 
-The 'devops' command is used to configure the Manage Jenkins, Github
+The 'devops' command is used to manage Jenkin and Github
 
 ```
 $ devops --help
@@ -77,7 +77,7 @@ To create a job
 $ devops jenkins create-job  --user admin --token xxxxx --foldername "foldername" --script Jenkinsfile.python  jobname
 ```
 
-###Github
+### Github
 
 For Listing repositories
 
