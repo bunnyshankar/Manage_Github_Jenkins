@@ -3,7 +3,7 @@
 from setuptools import setup
 
 dependencies = ['click', 'boto3', 'prettytable', 'termcolor',
-                'pyyaml>=3.13,<4.0', 'pyopenssl', 'python-jenkins', 
+                'pyyaml>=4.2b1', 'pyopenssl', 'python-jenkins', 
                 'click_shell', 'PyGithub', 'python-dateutil', 'requests',
                 'cryptography>=2.8']
 
