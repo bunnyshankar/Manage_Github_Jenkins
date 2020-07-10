@@ -1,0 +1,25 @@
+version: 1
+formatters:
+  brief:
+    format: '%(message)s'
+  precise:
+    format: '%(asctime)s %(levelname)-8s %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: brief
+    stream: ext://sys.stdout
+  file:
+    class: logging.handlers.RotatingFileHandler
+    formatter: precise
+    filename: cli.log
+    maxBytes: 1048576
+    backupCount: 9
+    mode: a
+loggers:
+  console:
+    level: INFO
+    handlers: [console, file]
+root:
+  level: DEBUG
+  handlers: [file]
