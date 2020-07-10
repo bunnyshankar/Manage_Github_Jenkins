@@ -9,11 +9,6 @@ Python 3.6+ pip3 and virtualenv required. Run "source install" or ". install" in
 
 Run "source activate" or ". activate" to activate a previously installed environment.
 
-## Set Your AWS Profile
-
-Configure your AWS Profiles under ~/.aws/config. For each profile make sure you have aws_access_key_id, aws_secret_access_key and region set properly.
-Region needs to be set to us-west-2 or you will have to supply '--region us-west-2' to the command line
-
 ## CLI Use
 
 The 'devops' command is used to configure the Manage Jenkins, Github
