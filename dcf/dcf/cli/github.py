@@ -100,6 +100,10 @@ def github_create_repo(ctx, src, src_token, tgt, tgt_token,
             gh_repo.create_git_ref(ref=refs, sha=branchref.commit.sha)
         print('Setting develop as default branch...')
         gh_repo.edit(default_branch=default_branch)
+        print('enforcing protection for master branch')
+        eBranch = tapi.get_branch(tgt, "master")
+        eBranch.edit_protection(enforce_admins=True, require_code_owner_reviews=True)
+        eBranch.edit_required_pull_request_reviews(dismiss_stale_reviews=True, required_approving_review_count=1)
 
 def github_revoke_access_for_collab(ctx, collabname, token):
     ''' REvoke access to a collaborator '''
