@@ -136,6 +136,12 @@ class GithubAPI:
         else:
             tgt_repo = server.get_repo(tgt)
         return tgt_repo
+    
+    def get_branch(self, repo, branch):
+        ''' get Reference for a branch '''
+        server = self.server
+        branch = server.get_repo(repo).get_branch(branch)
+        return branch
 
     def delete_labels(self, delete, tgt, gh_repo):
         ''' Delete labels for a repository '''
